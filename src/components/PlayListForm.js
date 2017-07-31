@@ -75,30 +75,37 @@ export default class PlayListForm extends Component {
 
     return (
 
-    <form className="container" onSubmit={this.addToList}>
+    <form className="container PlayForm" onSubmit={this.addToList}>
 
-      <div className="form-userName-div">
-        <label>User Name:</label>
-        <input type="text" placeholder="Name or User Name" name="userName" onChange={this.handlesNameChange} value={this.state.userName}/>
+
+
+      <div className="form-group other row">
+        <label for="example-text-input" className="col-2 col-form-label">User Name:</label>
+        <div className="col-10">
+          <input className="form-control" type="text" id="example-text-input" onChange={this.handlesNameChange} value={this.state.userName} />
+        </div>
       </div>
-
-      <div className="form-artist-div">
-        <label>Artist/Band:</label>
-        <input type="text" placeholder="Artist or Band Name" name="songArtist" onChange={this.handlesArtistChange} value={this.state.songArtist}/>
+      <div className="form-group row">
+        <label for="example-text-input" className="col-2 col-form-label">Artist/Band:</label>
+        <div className="col-10">
+          <input className="form-control" type="text" id="example-text-input" onChange={this.handlesArtistChange} value={this.state.songArtist} />
+        </div>
       </div>
-
-      <div className="form-title-div">
-        <label>Song Title:</label>
-        <input type="text" placeholder="Song Title" name="songTitle" onChange={this.handlesTitleChange} value={this.state.songTitle}/>
+      <div className="form-group other row">
+        <label for="example-text-input" className="col-2 col-form-label">Title:</label>
+        <div className="col-10">
+          <input className="form-control" type="text" id="example-text-input" onChange={this.handlesTitleChange} value={this.state.songTitle} />
+        </div>
       </div>
-
-      <div className="form-notes-div">
-        <label>Notes about Song:</label>
-        <textarea name="songNotes" onChange={this.handlesNotesChange} value={this.state.songNotes}/>
+      <div className="form-group row">
+        <label for="example-text-input" className="col-2 col-form-label">Notes:</label>
+        <div className="col-10">
+          <textarea className="form-control" id="exampleTextarea" rows="3" onChange={this.handlesNotesChange} value={this.state.songNotes} />
+        </div>
       </div>
 
       <div className="form-submit-div">
-        <input type="submit" value="submit" />
+        <input className="btn btn-success" type="submit" value="submit" />
       </div>
 
     </form>
@@ -106,14 +113,4 @@ export default class PlayListForm extends Component {
 
     )
   }
-
-
-
-
-
-
-
-
-
-
 }

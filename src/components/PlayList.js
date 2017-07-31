@@ -37,15 +37,10 @@ export default class Playlist extends Component {
 
     return(
 
-      <div className="container">
+      <div className="container PlayList">
 
-        {/* <form>
-          <input type="submit" value="update" onSubmit={this.fetchData} />
-        </form> */}
-        <div className="container">
-          <button type="button" value="update" onClick={this.fetchData}>Update</button>
+          <button className="btn btn-info" type="button" value="update" onClick={this.fetchData}>Update</button>
           <PlayListItem songs={this.state.songs}/>
-        </div>
 
       </div>
     )

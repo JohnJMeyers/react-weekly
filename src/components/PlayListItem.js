@@ -6,7 +6,6 @@ export default class PlayListItem extends Component{
   constructor (props) {
     super (props)
 
-    // this.fetchData = this.fetchData.bind(this)
   }
 
 
@@ -16,14 +15,27 @@ export default class PlayListItem extends Component{
     console.log("this.props.songs", this.props.songs)
 
     return (
-      <div className="">
+      <div className=" PlayItem">
         {this.props.songs.map((info) => {
           return (
-            <div className="container cards" key={info._id}>
-              <p className="" > User:{info.userName}</p>
-              <p className="" > Artist/Band:{info.songArtist}</p>
-              <p className="" > Title:{info.songTitle}</p>
-              <p className="" > Notes:{info.songNotes}</p>
+
+            <div className="card card-inverse key-div cards" key={info._id} style={{backgroundColor: 'rgba(255,255,255)', borderColor: '#333;'}}>
+              <div className="cardBlock" style={{backgroundColor: '#333'}}>
+                <h4 className="cardTitle">User:</h4>
+                <p className="cardText">{info.userName}</p>
+              </div>
+              <div className="cardBlock" style={{backgroundColor: '#333'}}>
+                <h4 className="cardTitle">Artist/Band:</h4>
+                <p className="cardText">{info.songArtist}</p>
+              </div>
+              <div className="cardBlock" style={{backgroundColor: '#333'}}>
+                <h4 className="cardTitle">Title:</h4>
+                <p className="cardText">{info.songTitle}</p>
+              </div>
+              <div className="cardBlock" style={{backgroundColor: '#333'}}>
+                <h4 className="cardTitle">Notes:</h4>
+                <p className="cardText">{info.songNotes}</p>
+              </div>
             </div>
           )
         })}

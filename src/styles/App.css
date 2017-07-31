@@ -31,6 +31,63 @@ form {
   display: flex;
 }
 
-nav {
+.navbar {
 border-bottom: 1px solid black;
+background-color: white;
+}
+
+.Playlist {
+  width: 95%;
+  margin-top: 50px;
+}
+
+.PlayItem {
+  margin: 10px;
+}
+
+.PlayForm {
+  margin-top: 50px;
+}
+
+button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cardBlock {
+  margin: 5px 10px;
+  padding-top: 5px;
+}
+
+.cards {
+  background-color: grey;
+  margin-bottom: 50px;
+}
+
+.cardTitle {
+  color: white;
+}
+
+.cardText {
+  color: gold;
+}
+
+.App {
+  background-color: whitesmoke;
+}
+
+.PlayForm {
+  height: 350px;
+  background-color: grey;
+  color: black;
+  margin-top: 85px;
+  margin-right: 80px;
+}
+
+.other {
+  background-color: lightgrey;
+}
+
+.form-group {
+  padding: 10px;
 }
