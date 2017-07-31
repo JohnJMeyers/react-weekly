@@ -75,7 +75,7 @@ export default class PlayListForm extends Component {
 
     return (
 
-    <form onSubmit={this.addToList}>
+    <form className="container" onSubmit={this.addToList}>
 
       <div className="form-userName-div">
         <label>User Name:</label>

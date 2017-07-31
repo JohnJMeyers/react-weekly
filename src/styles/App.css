@@ -22,3 +22,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+form {
+  border: 1px solid black;
+}
+
+.play-lists {
+  display: flex;
+}
+
+nav {
+border-bottom: 1px solid black;
+}

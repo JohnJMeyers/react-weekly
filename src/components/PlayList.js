@@ -10,7 +10,6 @@ export default class Playlist extends Component {
       songs: []
     }
 
-
     this.fetchData = this.fetchData.bind(this)
   }
 
@@ -19,18 +18,13 @@ export default class Playlist extends Component {
           return results.json();
         }).then(data => {
           this.setState({songs: data});
-          console.log("state", this.state.songs);
         })
   }
 
 
-
-  //Also in your PlayList component you should have a function that manually updates
-  //the playlist when a user presses a button. Use the following "fetchData" function
-  //to manually update your playlist.
-
   fetchData = (e) => {
       e.preventDefault();
+      console.log("hey", e)
       fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting').then(results => {
         return results.json();
       }).then(data => {
@@ -39,6 +33,23 @@ export default class Playlist extends Component {
     }
 
 
+  render() {
 
+    return(
+
+      <div className="container">
+
+        {/* <form>
+          <input type="submit" value="update" onSubmit={this.fetchData} />
+        </form> */}
+        <div className="container">
+          <button type="button" value="update" onClick={this.fetchData}>Update</button>
+          <PlayListItem songs={this.state.songs}/>
+        </div>
+
+      </div>
+    )
+
+  }
 
 }
